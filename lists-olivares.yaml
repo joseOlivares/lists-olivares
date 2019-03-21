@@ -66,11 +66,11 @@ form:
       largestyle:
         type: select.select
         label: Apply large style?
-        description: Check if you want to use it.
+        description: Yes if you want to use it.
         default: false
         options:
           false: No
-          true: Yes        
+          true: Yes
 
       listclass:
         type: input.text
@@ -88,7 +88,7 @@ form:
       enabledlinks:
         type:  select.select
         label: Enable links for items?
-        description: Check if you want to activate item link.
+        description: Yes if you want to activate item link.
         default: false
         options:
           false: No
