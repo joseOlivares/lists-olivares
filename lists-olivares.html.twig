@@ -17,9 +17,18 @@
 
     <div class="{{ particle.divlistclass|e}}">
         <{{particle.listtype|e}} class="uk-list {{particle.liststyle|e}} {{largestyle|e}} {{particle.listclass}}">
-          {% for item in particle.items %}
-                  <li><a href="{{item.link|e}}" target="{{ item.target|e }}" class="{{ item.linktype|e }} {{ item.aclass|e }}">{{item.text|raw}}</a></li>
-          {% endfor %}
+
+          {% if particle.itemhaslinks %}
+            {% for item in particle.items %}
+                    <li><a href="{{item.link|e}}" target="{{ item.target|e }}" class="{{ item.linktype|e }} {{ item.aclass|e }}">{{item.text|raw}}</a></li>
+            {% endfor %}
+          {% else %}
+              {% for item in particle.items %}
+                      <li class="{{ item.aclass|e }}">{{item.text|raw}}</li>
+              {% endfor %}
+          {% endif %}
+
+
         </{{particle.listtype|e}}>
     </div>
 </div>

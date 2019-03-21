@@ -82,6 +82,12 @@ form:
         placeholder: Classes
         default: 'noclass'
 
+      itemhaslinks:
+        type: input.checkbox
+        label: Enable links for items?
+        description: Check if you want to activate item link.
+        default: false
+
     items:
       type: collection.list
       array: true
