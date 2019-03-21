@@ -64,13 +64,10 @@ form:
           uk-list-striped: striped modifier
 
     largestyle:
-      type: select.select
+      type: input.checkbox
       label: Apply large style?
-      description: Yes if you want to use it.
+      description: Check if you want to use it.
       default: false
-      options:
-        false: No
-        true: Yes
 
     listclass:
       type: input.text
@@ -86,12 +83,10 @@ form:
       default: noclass
 
     enabledlinks:
-      type:  input.text
+      type:  input.checkbox
       label: Enable links for items?
-      description: Yes if you want to activate item link.
-      default: 0
-
-
+      description: Check if you want to activate item link.
+      default: false
 
     items:
       type: collection.list
