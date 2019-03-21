@@ -1,41 +1,26 @@
 {% extends '@nucleus/partials/particle.html.twig' %}
 {% block particle %}
-<div class="uk-container uk-text-center">
+<div class="uk-container">
     {% if particle.title %}
         <div class="g-grid">
             <div class="g-block size-100 {{ particle.title_css }}">
                 <{{ particle.titlehx|raw }} class="g-title">{{ particle.title|raw }}</{{ particle.titlehx|raw }}>
             </div>
         </div>
-    {% endif %}    
-    <div class="uk-child-width-1-{{particle.cardcount|default('2')}}@m uk-grid-match uk-grid" uk-grid>
-        {% for item in particle.items %}
-            <div>
-                <div class="uk-card uk-card-{{item.cardtype|default('default')}} uk-grid-collapse uk-child-width-1-2@s uk-margin {{particle.cardshover}} " uk-grid>
-                    <div class="uk-card-media-left uk-cover-container">
-                        <img src="{{ url(item.cardbodyimage)}}" class="" alt="{{item.textcardheader|e}}" uk-cover>
-                        <canvas width="1000" height="650"></canvas>         
-                    </div>
-                    <div class="uk-card-body {{item.cardbodypadding|e}}">
-                        <h3 class="uk-card-title uk-margin-remove-bottom">
-                            <a target="{{ item.target|default('_parent')|e }}" href="{{ item.link|e }}" class="uk-button uk-button-text">{{item.textcardheader|raw}}</a>
-                        </h3>
-                        <p class="uk-text-meta uk-margin-remove-top">{{ item.author|e }}, {{ item.date|e }}</p>
-                        <p class="uk-text-small">
-                            <a target="{{ item.target|default('_parent')|e }}" href="{{ item.link|e }}" class="uk-link-reset">
-                                {{ item.textintro|raw}}
-                            </a> 
-                        </p>
-                    </div>  
-                </div>
-            </div>
-        {% endfor %}    
+    {% endif %}
+
+    {% set largestyle = 'nostyle' %}
+
+    {% if particle.largestyle  %}
+        {% set largestyle = 'uk-list-large' %}
+    {% endif %}
+
+    <div class="{{ particle.divlistclass|e}}">
+        <{{particle.listtype|e}} class="uk-list {{particle.liststyle|e}} {{largestyle|e}} {{particle.listclass}}">
+          {% for item in particle.items %}
+                  <li><a href="{{item.link|e}}" target="{{ item.target|e }}" class="{{ item.linktype|e }} {{ item.aclass|e }}">{{item.text|raw}}</a></li>
+          {% endfor %}
+        </{{particle.listtype|e}}>
     </div>
-      <div class="uk-margin-medium-top" id="jlblogbutton">
-        {% if particle.blogbuttontext %}
-            <a class="uk-button {{ particle.blogbuttontype|e }}" href="{{ particle.bloglink|e }}" target="{{ particle.blogtarget|e }}" >{{ particle.blogbuttontext|raw }}</a>
-        {% endif %}    
-     </div>
 </div>
 {% endblock %}
-     
