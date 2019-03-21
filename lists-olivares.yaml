@@ -82,7 +82,7 @@ form:
         placeholder: Classes
         default: 'noclass'
 
-      itemhaslinks:
+      enabledlinks:
         type: input.checkbox
         label: Enable links for items?
         description: Check if you want to activate item link.
