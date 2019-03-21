@@ -63,36 +63,34 @@ form:
           uk-list-divider: divider modifier
           uk-list-striped: striped modifier
 
-      largestyle:
-        type: select.select
-        label: Apply large style?
-        description: Yes if you want to use it.
-        default: false
-        options:
-          false: No
-          true: Yes
+    largestyle:
+      type: select.select
+      label: Apply large style?
+      description: Yes if you want to use it.
+      default: false
+      options:
+        false: No
+        true: Yes
 
-      listclass:
-        type: input.text
-        label: Classes for List tag
-        description: Define the Classes to apply to the list (or leave it blank)
-        placeholder: Classes
+    listclass:
+      type: input.text
+      label: Classes for List tag
+      description: Define the Classes to apply to the list (or leave it blank)
+      placeholder: Classes
 
-      divlistclass:
-        type: input.text
-        label: Classes for list div container
-        description: Define the Classes to apply to the div container (or leave it blank)
-        placeholder: Classes
-        default: 'noclass'
+    divlistclass:
+      type: input.text
+      label: Classes for list div container
+      description: Define the Classes to apply to the div container (or leave it blank)
+      placeholder: Classes
+      default: noclass
 
-      enabledlinks:
-        type:  select.select
-        label: Enable links for items?
-        description: Yes if you want to activate item link.
-        default: 0
-        options:
-          0: No
-          1: Yes
+    enabledlinks:
+      type:  input.text
+      label: Enable links for items?
+      description: Yes if you want to activate item link.
+      default: 0
+
 
 
     items:
