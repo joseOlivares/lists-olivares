@@ -45,8 +45,8 @@ form:
 
     listtype:
       type:  select.select
-      label:
-      description: Select the list type (unordered or ordered list)
+      label: Select the list type
+      description:  unordered or ordered list
       default: ul
       options:
           ul: unordered
@@ -54,8 +54,8 @@ form:
 
     liststyle:
       type:  select.select
-      label:
-      description: Select the list style
+      label: Select the list style
+      description: List style based on UIkit3
       default: nostyle
       options:
           nostyle: default
