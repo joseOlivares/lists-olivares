@@ -1,5 +1,5 @@
-name: HorizontalCards-Olivares
-description: UIkit3 Horizontal Cards with images, by Jose Luis Olivares (https://sv.linkedin.com/in/jolivaress). 
+name: Lists-Olivares
+description: UIkit3 Lists, by Jose Luis Olivares (https://sv.linkedin.com/in/jolivaress).
 type: particle
 icon: fa-th-large
 
@@ -25,9 +25,9 @@ form:
       type: input.text
       label: Title
       description: Customize the title text.
-      placeholder: Enter title 
+      placeholder: Enter title
 
-    titlehx:      
+    titlehx:
       type:  select.select
       label: Title Header Size
       description: Select the <h> size
@@ -43,9 +43,9 @@ form:
       label: Title CSS Classes
       description: Customize the title CSS Classes.
 
-    cardcount:      
+    cardcount:
       type:  select.select
-      label: Card Items to show 
+      label: Card Items to show
       description: Select the number of card items to show per row
       placeholder: 'Select...'
       default: 2
@@ -59,7 +59,7 @@ form:
       label: Blog Button Text
       description: Customize the text to show inside button blog.
       placeholder: Enter text
-      default: My Blog 
+      default: My Blog
 
     blogbuttontype:
       type: select.select
@@ -71,14 +71,14 @@ form:
           uk-button-default: default
           uk-button-primary: primary
           uk-button-secondary: secondary
-          uk-button-danger: danger  
+          uk-button-danger: danger
           uk-button-text: text
-          uk-button-link: link       
+          uk-button-link: link
 
     bloglink:
-      type: input.text 
+      type: input.text
       label: Blog Link
-      default: '#'  
+      default: '#'
 
     blogtarget:
       type: select.select
@@ -93,16 +93,16 @@ form:
     cardshover:
       type: select.select
       label: Use Hover effect for cards?
-      description: Activate Hover effet 
+      description: Activate Hover effet
       default: no-hover
       options:
           no-hover: No
-          uk-card-hover: Yes            
+          uk-card-hover: Yes
 
     items:
       type: collection.list
       array: true
-      label: Cards 
+      label: Cards
       description: Create each Card item to display.
       value: name
       ajax: true
@@ -115,13 +115,13 @@ form:
           default: by Administrator
 
         .date:
-          type: input.datetime 
+          type: input.datetime
           label: Date of creation
           description: Select article's date.
 
         .textcardheader:
           type: input.text
-          label: Card Text Header                  
+          label: Card Text Header
 
         .cardbodyimage:
           type: input.imagepicker
@@ -138,15 +138,15 @@ form:
               default: default
               uk-padding-remove: no padding all
               uk-padding-remove-horizontal: remove horizontal
-              uk-padding-remove-vertical: remove vertical  
-              uk-padding-small: Small        
+              uk-padding-remove-vertical: remove vertical
+              uk-padding-small: Small
 
         .textintro:
           type: textarea.textarea
           label: Card article intro text
           description: Customize the card intro text.
           placeholder: 'Enter card intro text'
-          default: ''          
+          default: ''
 
         .link:
           type: input.text
@@ -161,7 +161,7 @@ form:
           default: _parent
           options:
               _parent: Self
-              _blank: New Window 
+              _blank: New Window
 
         .cardtype:
           type: select.select
