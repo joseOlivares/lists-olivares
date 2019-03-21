@@ -1,0 +1,175 @@
+name: HorizontalCards-Olivares
+description: UIkit3 Horizontal Cards with images, by Jose Luis Olivares (https://sv.linkedin.com/in/jolivaress). 
+type: particle
+icon: fa-th-large
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable particles.
+      default: true
+
+    css.class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+      default: center
+
+    title:
+      type: input.text
+      label: Title
+      description: Customize the title text.
+      placeholder: Enter title 
+
+    titlehx:      
+      type:  select.select
+      label: Title Header Size
+      description: Select the <h> size
+      placeholder: 'Select...'
+      default: h1
+      options:
+          h1: Header 1
+          h2: Header 2
+          h3: Header 3
+
+    title_css:
+      type: input.selectize
+      label: Title CSS Classes
+      description: Customize the title CSS Classes.
+
+    cardcount:      
+      type:  select.select
+      label: Card Items to show 
+      description: Select the number of card items to show per row
+      placeholder: 'Select...'
+      default: 2
+      options:
+          2: 2 cards
+          3: 3 cards
+          4: 4 cards
+
+    blogbuttontext:
+      type: input.text
+      label: Blog Button Text
+      description: Customize the text to show inside button blog.
+      placeholder: Enter text
+      default: My Blog 
+
+    blogbuttontype:
+      type: select.select
+      label: Button Type
+      description: Select the blog button type.
+      placeholder: 'Select...'
+      default: default
+      options:
+          uk-button-default: default
+          uk-button-primary: primary
+          uk-button-secondary: secondary
+          uk-button-danger: danger  
+          uk-button-text: text
+          uk-button-link: link       
+
+    bloglink:
+      type: input.text 
+      label: Blog Link
+      default: '#'  
+
+    blogtarget:
+      type: select.select
+      label: Blog Link target
+      description: Target browser window when the blog button is clicked.
+      placeholder: 'Select...'
+      default: _parent
+      options:
+          _parent: Self
+          _blank: New Window
+
+    cardshover:
+      type: select.select
+      label: Use Hover effect for cards?
+      description: Activate Hover effet 
+      default: no-hover
+      options:
+          no-hover: No
+          uk-card-hover: Yes            
+
+    items:
+      type: collection.list
+      array: true
+      label: Cards 
+      description: Create each Card item to display.
+      value: name
+      ajax: true
+
+      fields:
+
+        .author:
+          type: input.text
+          label: Author Name
+          default: by Administrator
+
+        .date:
+          type: input.datetime 
+          label: Date of creation
+          description: Select article's date.
+
+        .textcardheader:
+          type: input.text
+          label: Card Text Header                  
+
+        .cardbodyimage:
+          type: input.imagepicker
+          label: Left Image
+          description: Select an image for the card body.
+
+        .cardbodypadding:
+          type: select.select
+          label: Card body padding
+          description: Select padding.
+          placeholder: 'Select...'
+          default: default
+          options:
+              default: default
+              uk-padding-remove: no padding all
+              uk-padding-remove-horizontal: remove horizontal
+              uk-padding-remove-vertical: remove vertical  
+              uk-padding-small: Small        
+
+        .textintro:
+          type: textarea.textarea
+          label: Card article intro text
+          description: Customize the card intro text.
+          placeholder: 'Enter card intro text'
+          default: ''          
+
+        .link:
+          type: input.text
+          label: Link
+          default: '#'
+
+        .target:
+          type: select.select
+          label: Link target
+          description: Target browser window when item is clicked.
+          placeholder: 'Select...'
+          default: _parent
+          options:
+              _parent: Self
+              _blank: New Window 
+
+        .cardtype:
+          type: select.select
+          label: Card Style
+          description: Select the card style.
+          placeholder: 'Select...'
+          default: default
+          options:
+            default: Default
+            primary: Primary
+            secondary: Secondary
