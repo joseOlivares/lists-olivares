@@ -16,7 +16,7 @@
     {% endif %}
 
     <div class="{{ particle.divlistclass|e}}">
-        <{{particle.listtype|e}} class="uk-list {{particle.liststyle|e}} {{largestyle|e}} {{particle.listclass}}">
+        <{{particle.listtype|e}} class="uk-list {{particle.liststyle|e}} {{largestyle|e}} {{particle.listclass}}"> <!-- <ul> -->
 
           {% if particle.itemhaslinks %}
             {% for item in particle.items %}
@@ -29,7 +29,7 @@
           {% endif %}
 
 
-        </{{particle.listtype|e}}>
+        </{{particle.listtype|e}}> <!-- </ul> -->
     </div>
 </div>
 {% endblock %}
