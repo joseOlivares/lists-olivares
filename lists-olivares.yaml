@@ -89,10 +89,10 @@ form:
         type:  select.select
         label: Enable links for items?
         description: Yes if you want to activate item link.
-        default: false
+        default: 0
         options:
-          false: No
-          true: Yes
+          0: No
+          1: Yes
 
 
     items:
